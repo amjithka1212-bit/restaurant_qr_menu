@@ -268,11 +268,15 @@ document.querySelector("#place").onclick = async () => {
   // Save the total before clearing the cart.
   const orderedTotal = total;
 
-  // Clear cart
-  cart = {};
+// Clear cart
+cart = {};
 
-  renderCart();
+renderCart();
 
+// Hide cart total and order button
+document.querySelector("#place").style.display = "none";
+
+document.querySelector("#total").parentElement.style.display = "none";
 
   // =====================================================
   // SHOW CONFIRMATION
